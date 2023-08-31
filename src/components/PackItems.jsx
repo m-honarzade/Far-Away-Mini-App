@@ -1,4 +1,4 @@
-const PackItems = ({ item }) => {
+const PackItems = ({ item, onDeleteItem }) => {
   return (
     <li className="flex flex-row gap-x-2 px-4 md:px-0 ">
       <span
@@ -9,7 +9,7 @@ const PackItems = ({ item }) => {
         {item.quantity} {item.description}
       </span>
 
-      <button>❌</button>
+      <button onClick={() => onDeleteItem(item.id)}>❌</button>
     </li>
   );
 };
