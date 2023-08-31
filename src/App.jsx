@@ -13,18 +13,32 @@ import PackingList from "./layout/PackingList";
 
 function App() {
   const [items, setItems] = useState([]);
+
   const addItemHandler = (item) => {
     setItems((items) => [...items, item]);
   };
+
   const deleteItemHandler = (id) => {
     setItems(items.filter((item) => item.id !== id));
   };
-  console.log(items);
+
+  const packedItemHandler = (id) => {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
+  };
+
   return (
     <div className=" bg-[#5a3e2b] flex flex-col min-h-screen ">
       <Header />
       <Form onAddItem={addItemHandler} />
-      <PackingList items={items} onDeleteItem={deleteItemHandler} />
+      <PackingList
+        items={items}
+        onDeleteItem={deleteItemHandler}
+        onPackedItem={packedItemHandler}
+      />
       <Footer />
     </div>
   );
