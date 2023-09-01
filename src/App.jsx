@@ -39,7 +39,7 @@ function App() {
         onDeleteItem={deleteItemHandler}
         onPackedItem={packedItemHandler}
       />
-      <Footer />
+      <Footer items={items} />
     </div>
   );
 }
