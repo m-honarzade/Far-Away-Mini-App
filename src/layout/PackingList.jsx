@@ -44,7 +44,7 @@ const PackingList = ({ items, onDeleteItem, onPackedItem, onClearList }) => {
         </select>
         <button
           onClick={onClearList}
-          className="uppercase text-xs pointer bg-[#ffebb3] text-amber-950 w-36 px-1 rounded-full py-1 text-center font-semibold "
+          className="uppercase text-xs pointer bg-[#ffebb3] text-amber-950 w-28 px-1 rounded-full py-1 text-center font-semibold "
         >
           Clear List
         </button>
