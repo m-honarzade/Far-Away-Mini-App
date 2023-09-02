@@ -30,6 +30,13 @@ function App() {
     );
   };
 
+  const clearListHandler = () => {
+    const confirm = window.confirm(
+      "Are you sure you want to delete all items? "
+    );
+    if (confirm) setItems([]);
+  };
+
   return (
     <div className=" bg-[#5a3e2b] flex flex-col min-h-screen ">
       <Header />
@@ -38,6 +45,7 @@ function App() {
         items={items}
         onDeleteItem={deleteItemHandler}
         onPackedItem={packedItemHandler}
+        onClearList={clearListHandler}
       />
       <Footer items={items} />
     </div>
