@@ -15,7 +15,7 @@ const PackingList = ({ items, onDeleteItem, onPackedItem, onClearList }) => {
       .slice()
       .sort((a, b) => Number(a.packed) - Number(b.packed));
   return (
-    <div className="relative text-[#ffebb3] flex flex-col justify-start h-8 items-center">
+    <div className="relative text-[#ffebb3] flex flex-col justify-start h-8 items-center p-2">
       <ul className=" py-8 grid grid-cols-3 gap-x-8 gap-y-4 md:gap-x-32 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
         {sortedItems.map((item) => (
           <PackItems

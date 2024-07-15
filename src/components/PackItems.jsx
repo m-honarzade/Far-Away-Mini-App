@@ -9,7 +9,7 @@ const PackItems = ({ item, onDeleteItem, onPackedItem }) => {
       />
       <span
         className={`flex flex-row gap-x-2 whitespace-nowrap ${
-          item.packed ? "line-through" : ""
+          item.packed ? "line-through decoration-red-600 decoration-2" : ""
         }`}
       >
         {item.quantity} {item.description}

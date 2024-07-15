@@ -14,8 +14,8 @@ const Footer = ({ items }) => {
   const packedItemsPercentage = Math.round((packedItems / itemsNum) * 100);
 
   return (
-    <div className="bg-[#76c7ad] flex justify-center items-center mt-auto h-16">
-      <p className="font-bold text-amber-950 text-sm md:text-base px-[2.5] md:px-0 ">
+    <div className="bg-[#76c7ad] flex flex-row justify-center items-center mt-auto h-16 p-4 sm:p-0">
+      <p className="text-center font-bold text-amber-950 text-sm md:text-base px-[2.5] md:px-0 ">
         {packedItemsPercentage === 100
           ? `You got everything. Ready to go ✈`
           : ` 💼 you have packed ${itemsNum} items on your list, and you already packed
